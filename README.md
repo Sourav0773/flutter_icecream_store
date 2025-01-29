@@ -1,6 +1,5 @@
-# icecream_store
-
-A new Flutter project.
+# icecream_store_app
+Icecream 🍨 store app 
 
 ## Getting Started
 
