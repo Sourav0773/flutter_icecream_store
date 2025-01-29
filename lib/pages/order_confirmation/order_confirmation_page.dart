@@ -14,13 +14,13 @@ class OrderConfirmationPage extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Thank You Text
-              const Text(
+                Text(
                 'Thank You for Your Order!',
                 style: TextStyle(
                   fontSize: 32,
@@ -32,24 +32,24 @@ class OrderConfirmationPage extends StatelessWidget {
                       offset: Offset(3.0, 3.0),
                       blurRadius: 8.0,
                       color: Color(
-                          0x4D000000), // 0x4D is the hex value for 30% opacity
+                          0x4D000000),
                     ),
                   ],
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
 
               // Success Icon
-              const Icon(
+              Icon(
                 Icons.check_circle_outline,
                 color: Colors.green,
                 size: 80,
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
 
               // Informational Text
-              const Text(
+              Text(
                 'Your order is on its way!\nYou will receive an email confirmation shortly.',
                 style: TextStyle(
                   fontSize: 18,
@@ -58,7 +58,7 @@ class OrderConfirmationPage extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30),
 
               // Button to Go to Home
               ElevatedButton(
@@ -69,12 +69,12 @@ class OrderConfirmationPage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.deepPurple,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+                         EdgeInsets.symmetric(horizontal: 60, vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   'Go to Home',
                   style: TextStyle(
                     fontSize: 18,
