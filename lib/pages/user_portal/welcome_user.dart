@@ -25,7 +25,7 @@ class WelcomeUser extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,7 +48,7 @@ class WelcomeUser extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
 
-              const SizedBox(height: 30),
+              SizedBox(height: 30),
 
               Text(
                 'Continue shopping and enjoy our delicious ice cream flavors!',
@@ -59,7 +59,7 @@ class WelcomeUser extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
 
-              const SizedBox(height: 30),
+              SizedBox(height: 30),
 
               // TextButton to continue shopping
               TextButton(
@@ -67,19 +67,19 @@ class WelcomeUser extends StatelessWidget {
                   // Navigate to User Page (Shopping page)
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const User()),
+                    MaterialPageRoute(builder: (context) => User()),
                   );
                 },
                 style: TextButton.styleFrom(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 60, vertical: 20),
+                      EdgeInsets.symmetric(horizontal: 60, vertical: 20),
                   textStyle: GoogleFonts.pacifico(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                     color: Colors.deepPurpleAccent,
                   ),
                 ),
-                child: const Text('Continue Shopping'),
+                child: Text('Continue Shopping'),
               ),
             ],
           ),
