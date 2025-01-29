@@ -24,13 +24,6 @@ class AdminPortalState extends State<AdminPortal> {
 
   TextEditingController searchController = TextEditingController();
 
-  @override
-  void initState() {
-    super.initState();
-    filteredUserNames = userNames;
-    searchController.addListener(filterUsers);
-  }
-
   // Function to filter users based on the search query
   void filterUsers() {
     final query = searchController.text.toLowerCase();
@@ -40,6 +33,14 @@ class AdminPortalState extends State<AdminPortal> {
           .toList();
     });
   }
+
+  @override
+  void initState() {
+    super.initState();
+    filteredUserNames = userNames;
+    searchController.addListener(filterUsers);
+  }
+
 
   @override
   void dispose() {
