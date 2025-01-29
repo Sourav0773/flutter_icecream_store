@@ -33,16 +33,16 @@ class ModifyCartState extends State<ModifyCart> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Modify Cart'),
+        title: Text('Modify Cart'),
       ),
       body: ListView.builder(
         itemCount: cartItems.length,
         itemBuilder: (context, index) {
           var item = cartItems[index];
           return Card(
-            margin: const EdgeInsets.all(8.0),
+            margin: EdgeInsets.all(8.0),
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.0),
               child: Row(
                 children: [
                   // Item name and price
@@ -50,17 +50,17 @@ class ModifyCartState extends State<ModifyCart> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(item['name'],
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold)),
                       Text('\$${item['price']}'),
                     ],
                   ),
-                  const Spacer(),
+                  Spacer(),
                   // Quantity adjuster
                   Row(
                     children: [
                       IconButton(
-                        icon: const Icon(Icons.remove),
+                        icon: Icon(Icons.remove),
                         onPressed: () {
                           if (item['quantity'] > 1) {
                             updateQuantity(index, item['quantity'] - 1);
@@ -69,7 +69,7 @@ class ModifyCartState extends State<ModifyCart> {
                       ),
                       Text(item['quantity'].toString()),
                       IconButton(
-                        icon: const Icon(Icons.add),
+                        icon: Icon(Icons.add),
                         onPressed: () {
                           updateQuantity(index, item['quantity'] + 1);
                         },
@@ -78,7 +78,7 @@ class ModifyCartState extends State<ModifyCart> {
                   ),
                   // Remove button
                   IconButton(
-                    icon: const Icon(Icons.delete, color: Colors.red),
+                    icon: Icon(Icons.delete, color: Colors.red),
                     onPressed: () {
                       removeItem(index);
                     },
